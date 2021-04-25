@@ -83,6 +83,19 @@ DATABASES = {
     }
 }
 
+#Mysql Connection
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'djangodatabase',
+#         'USER': 'dbadmin',
+#         'PASSWORD': '12345',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -108,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Dhaka'
 
 USE_I18N = True
 
@@ -122,15 +135,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-import os
-
 
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 # Default primary key field type
